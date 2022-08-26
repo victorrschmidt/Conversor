@@ -25,6 +25,9 @@ let generate_text;
     function mudarMetodo() {        
         input_method.removeChild(input_method.firstChild);
         output_method.removeChild(output_method.firstChild);
+        if(output.firstChild != null) {
+            output.removeChild(output.firstChild);
+        }
         if(method == 'dec_hex') {
             method = 'hex_dec';
             generate_text = document.createTextNode('HEX');
