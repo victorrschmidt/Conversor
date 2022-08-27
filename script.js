@@ -37,6 +37,7 @@ let error;
             
     function mudarMetodo() {        
         input_method.removeChild(input_method.firstChild);
+        input.focus();
         output_method.removeChild(output_method.firstChild);
         if(output.firstChild != null) {
             output.removeChild(output.firstChild);
