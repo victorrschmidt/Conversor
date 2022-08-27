@@ -18,7 +18,7 @@ let error;
         error = false;
         if(method == 'dec_hex') {
             value = Number(input.value);
-            if(value > 4294967295 || isNaN(value)) {
+            if(isNaN(value)) {
                 error = true;
             } 
             value = value.toString(16).toUpperCase();
