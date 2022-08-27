@@ -19,8 +19,8 @@ header {
 #logo {
     font-size: 3.0em;
 }
-button p {
-    margin: 7px;
+button {
+    padding: 7px;
 }
 #tema {
     background: none;
