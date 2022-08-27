@@ -80,6 +80,7 @@ main {
     border-radius: 5px;
     border: solid 1px;
     font-family: Arial, sans-serif;
+    text-transform: uppercase;
     text-align: center;
     font-size: 2.0em;
 }

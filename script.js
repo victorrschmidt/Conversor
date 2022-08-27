@@ -8,18 +8,31 @@ const output = document.querySelector("#output");
 const toggle = document.getElementById("#tema");
 let tema = 'escuro';
 let method = 'dec_hex';
-let generate_text;
+let value;
+let error;
             
     function converter() {
         if(output.firstChild != null) {
             output.removeChild(output.firstChild);
         }
+        error = false;
         if(method == 'dec_hex') {
-            generate_text = document.createTextNode(Number(input.value).toString(16).toUpperCase());
-        } else {
-            generate_text = document.createTextNode(parseInt(input.value, 16));
+            value = Number(input.value);
+            if(value > 4294967295 || isNaN(value)) {
+                error = true;
+            } 
+            value = value.toString(16).toUpperCase();
+        } 
+        else {
+            value = input.value.toUpperCase();
+            for(let i of value) {
+                if(!((i.charCodeAt(0) >= 48 && i.charCodeAt(0) <= 57) || (i.charCodeAt(0) >= 65 && i.charCodeAt(0) <= 70))) {
+                    error = true;
+                }
+            }
+            value = parseInt(value, 16);
         }
-        output.appendChild(generate_text);
+        error ? alert("Valor inválido") : output.appendChild(document.createTextNode(value));
     }
             
     function mudarMetodo() {        
@@ -28,21 +41,9 @@ let generate_text;
         if(output.firstChild != null) {
             output.removeChild(output.firstChild);
         }
-        if(method == 'dec_hex') {
-            method = 'hex_dec';
-            generate_text = document.createTextNode('HEX');
-            input_method.appendChild(generate_text);
-            input.setAttribute("type","text");
-            generate_text = document.createTextNode('DEC');
-            output_method.appendChild(generate_text);
-        } else {
-            method = 'dec_hex';
-            generate_text = document.createTextNode('DEC');
-            input_method.appendChild(generate_text);
-            input.setAttribute("type","number");
-            generate_text = document.createTextNode('HEX');
-            output_method.appendChild(generate_text);
-        }
+        method == 'dec_hex' ? method = 'hex_dec' : method = 'dec_hex';
+        input_method.appendChild(document.createTextNode(method.slice(0, 3).toUpperCase()));
+        output_method.appendChild(document.createTextNode(method.slice(4).toUpperCase()));
     }
 
     function mudarTema() {
