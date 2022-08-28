@@ -17,6 +17,7 @@ header {
     padding: 0 2.0vw;
 }
 #logo {
+    font-weight: normal;
     font-size: 3.0em;
 }
 button {
