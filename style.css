@@ -95,13 +95,13 @@ main {
     border-radius: 5px;
     font-size: 2.0em;
 }
-@media (min-width: 1367px) {
+@media only screen and (min-width: 1367px) {
     #header-content {
         width: 1367px;
         margin: 0 auto;
     }
 }
-@media (max-width: 506px) {
+@media only screen and (max-width: 506px) {
     #logo { font-size: 9.5vw; }
     #tema { font-size: 4.4vw; }
     main { width: 83.0vw; }
