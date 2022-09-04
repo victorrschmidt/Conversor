@@ -2,4 +2,4 @@
 
 v1.0 (versão atual)
 
-Link: https://victorrschmidt.github.io/conversor/v1.0/
+Link: https://victorrschmidt.github.io/conversor_de_medidas/v1.0/
