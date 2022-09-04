@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Conversor</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"/>
+</head>
+<body>
+    <header>
+        <div id="header-content">
+            <div id="header-left-content">
+                <h1 id="logo">Conversor</h1>
+                <h2 id="versao">v2.0</h2>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="tipos-medidas">
+            <div class="medida" id="temperatura" onclick="mudarMedida(this.id)">
+                TEMPERATURA
+            </div>
+            <div class="medida" id="velocidade" onclick="mudarMedida(this.id)">
+                VELOCIDADE
+            </div>
+            <div class="medida"></div>
+            <div class="medida"></div>
+            <div class="medida"></div>
+            <div class="medida"></div>
+            <div class="medida"></div>
+            <div class="medida"></div>     
+            <div class="medida"></div>
+        </div>
+        <div id="input-output-area">
+            <div class="in-out-titulo">
+                <div class="drop-icon">
+                    <ul id="input-list" class="drop-list">
+                        <li id="in-celsius" class="list-active">Celsius (°C)</li>
+                        <li id="in-fahrenheit" onclick="mudarUnidade(this.id)">Fahrenheit (°F)</li>
+                        <li id="in-kelvin" onclick="mudarUnidade(this.id)">Kelvin (K)</li>
+                        <li id="in-rankine" onclick="mudarUnidade(this.id)">Rankine (°Ra)</li>
+                        <li id="in-reaumur" onclick="mudarUnidade(this.id)">Réaumur (°Ré)</li>
+                        <li id="in-newton" onclick="mudarUnidade(this.id)">Newton (°N)</li>
+                    </ul>
+                </div>
+                <label for="input" class="input-output-metodo">Celsius (°C)</label>
+            </div>
+            <input id="input" type="number" placeholder="Digite o valor" autofocus/>
+            <div id="botoes">
+                <button id="converter" onclick="converter()">Converter</button>
+                <button id="inverter" onclick="inverter()">Inverter</button>
+            </div>
+            <div class="in-out-titulo">
+                <div class="drop-icon">
+                    <ul id="output-list" class="drop-list">
+                        <li id="out-celsius" onclick="mudarUnidade(this.id)">Celsius (°C)</li>
+                        <li id="out-fahrenheit" class="list-active">Fahrenheit (°F)</li>
+                        <li id="out-kelvin" onclick="mudarUnidade(this.id)">Kelvin (K)</li>
+                        <li id="out-rankine" onclick="mudarUnidade(this.id)">Rankine (°Ra)</li>
+                        <li id="out-reaumur" onclick="mudarUnidade(this.id)">Réaumur (°Ré)</li>
+                        <li id="out-newton" onclick="mudarUnidade(this.id)">Newton (°N)</li>
+                    </ul>
+                </div>
+                <h3 class="input-output-metodo">Fahrenheit (°F)</h3>
+            </div>
+            <span id="output"></span>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
