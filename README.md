@@ -2,7 +2,6 @@
 
 v2.0 (Em breve)
 
-Link: -
 
 v1.0 (versão atual)
 
