@@ -1,0 +1,226 @@
+:root {
+    --tom-primario: #B4E693;
+    --tom-secundario: #88E04C;
+    --tom-terciario: #69AD3B;
+    --tom-quaternario: #3B6121;
+    --tom-quinario: #4C613E;
+    --cinza-claro: #C8C8C8;
+    --cinza-escuro: #888888;
+}
+* { padding: 0; margin: 0; border: 0; }
+
+body {
+    background: var(--tom-primario);
+    color: white;
+    font-family: 'Lato', sans-serif;
+}
+header {
+    background: var(--tom-quaternario);
+    outline: solid var(--tom-secundario);
+    outline-width: 2px;
+    width: 100.0%;
+    height: 49px;
+    margin-bottom: 21px;
+}
+#header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100.0%;
+    padding: 0 2.0vw;
+}
+#header-left-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 227px;
+}
+#logo {
+    opacity: 0.8;
+    font-weight: normal;
+    font-size: 2.4em;
+}
+#versao {
+    opacity: 0.8;
+    font-weight: normal;
+    font-size: 1.4em;
+}
+main {
+    background: var(--tom-terciario);
+    outline: solid var(--tom-secundario);
+    outline-width: 2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    width: 770px;
+    height: 420px;
+    padding: 14px;
+    margin: 0 auto;
+    border-radius: 12px;
+}
+#unidades-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 55.0%;
+    height: 100.0%;
+}
+.unidade {
+    background: var(--tom-quinario);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 110px;
+    height: 110px;
+    border-radius: 6px;
+}
+.unidade-selecionada {
+    outline: solid 8px var(--tom-quaternario);
+}
+.unidade:not(.unidade-selecionada) {
+    cursor: pointer;
+}
+#input-output-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    width: 44.0%;
+    height: 80.0%;
+}
+.input-output-escala {
+    font-weight: normal;
+    font-size: 1.0em;
+}
+#input, 
+#output {
+    z-index: 0;  /* Não sobrepor sobre a lista de escalas */
+    outline: solid black 3px;
+    box-sizing: border-box;
+    width: 89.0%;
+    height: 14.0%;
+    margin-left: 16px;
+    border-radius: 7px;
+    text-align: center;
+    font-size: 1.4em;
+}
+#output {
+    background: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#botoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 65.0%;
+    height: 20.0%;
+}
+#converter, 
+#inverter {
+    background: var(--tom-quaternario);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 40.0%;
+    height: 80.0%;
+    border-radius: 7px;
+    font-size: 1.0em;
+    transition: 0.15s;
+}
+#converter:active, 
+#inverter:active {
+    opacity: 0.6;
+}
+.in-out-titulo {
+    display: flex;
+    align-items: center;
+    width: 88.0%;
+    margin-left: 14px;
+}
+.drop-square {
+    background: var(--tom-quinario);
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    margin-right: 10px;
+    border-radius: 4px;
+}
+.drop-list-fechada {
+    display: none;
+}
+.drop-list-aberta {  /* Disponível ao clicar para abrir a lista de escalas */
+    z-index: 1;  /* Sobrepor sobre a lista de escalas */
+    background: white;
+    box-shadow: 5px 5px 12px 1px black;
+    position: relative;
+    top: 16px;
+    right: 245px;
+    display: block;
+    height: 180px;
+    width: 260px;
+    overflow-y: auto;
+    font-size: 1.4em;
+}
+.drop-list-aberta li {
+    color: black;
+    list-style: none;
+    padding: 6px;
+    font-size: 0.7em;
+}
+.list-active {
+    background: var(--cinza-escuro);
+    cursor: auto;
+}
+.drop-list-aberta li:not(.list-active):hover {
+    background: var(--cinza-claro);
+}
+span.material-symbols-outlined {  /* Ícones do Google (valores padrão para os ícones de unidades de medida) */
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 480;
+    font-size: 500.0%;
+    transition: 0.3s;
+}
+span#inverter-icone {
+    font-size: 220.0%;
+}
+span.drop-icon {
+    position: absolute;
+    font-size: 180.0%;
+}
+.drop-square:hover span.drop-icon {
+    opacity: 0.7;
+}
+.unidade:hover span.material-symbols-outlined, 
+.unidade-selecionada span.material-symbols-outlined { 
+    opacity: 0.7;
+    font-size: 300.0%;
+}
+
+@media only screen and (max-width: 854px) {
+    main {
+        flex-direction: column-reverse;
+        gap: 20px;
+        width: 80.0vw;
+        height: 800px;
+    }
+    #unidades-area, 
+    #input-output-area {
+        width: 70.0%;
+    }
+}
+
+@media only screen and (min-width: 1367px) {
+    #header-content {
+        width: 1367px;
+        margin: 0 auto;
+    }
+}
