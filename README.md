@@ -1,4 +1,8 @@
-<h1>Conversor de medidas</h1>
+<h1 align="center">Conversor de medidas</h1>
+
+## Sobre
+
+## Versões
 
 v2.0 (Em breve)
 
