@@ -6,6 +6,6 @@ Este repositório contém os arquivos de um projeto de site de conversão de med
 
 ## Versões
 
-### v1.0 (Versão atual) - Link fixado do repositório
+### v1.0 (Primeira versão) 
 
-### v2.0 (Em breve)
+### v2.0 (Versão atual) - Link fixado do repositório
