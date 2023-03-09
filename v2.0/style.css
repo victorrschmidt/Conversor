@@ -1,0 +1,381 @@
+:root {
+    --tom-primario: #8FC2EE;
+    --tom-secundario: #479EEB;
+    --tom-terciario: #377CB8;
+    --tom-quaternario: #40576B;
+    --tom-quinario: #20486B;
+    --cinza-claro: #C8C8C8;
+    --cinza-escuro: #888888;
+}
+* { 
+    box-sizing: border-box;
+    padding: 0; 
+    margin: 0; 
+    border: 0;
+    transition-property: background-color, outline-color;  /* Transição para temas de cores */
+    transition-duration: 1.4s; 
+}
+
+body {
+    background-color: var(--tom-primario); 
+    color: white;
+    font-family: 'Lato', sans-serif;
+}
+header {
+    background-color: var(--tom-quaternario);
+    outline: solid var(--tom-secundario) 2px;
+    width: 100.0%;
+    height: 50px;
+}
+#header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100.0%;
+    padding: 0 2.0vw;
+}
+#header-left-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 227px;
+}
+#logo {
+    opacity: 0.8;
+    font-weight: normal;
+    font-size: 2.4em;
+}
+#versao {
+    opacity: 0.8;
+    font-weight: normal;
+    font-size: 1.4em;
+}
+main {
+    background-color: var(--tom-quinario);
+    outline: solid var(--tom-secundario) 2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 770px;
+    height: 420px;
+    padding: 0.9rem;
+    margin: 1.4rem auto 3.5rem;
+    border-radius: 12px;
+}
+#unidades-area {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 55.0%;
+    height: 100.0%;
+    margin-top: 0;
+}
+.unidade {
+    background-color: var(--tom-terciario);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 110px;
+    height: 110px;
+    border-radius: 6px;
+}
+.unidade p {
+    font-size: 1.0em;
+}
+.unidade-selecionada {
+    outline: solid var(--tom-quaternario);
+    outline-width: 8px;
+}
+.unidade:not(.unidade-selecionada) {
+    cursor: pointer;
+}
+#input-output-area {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+    width: 44.0%;
+    height: 80.0%;
+}
+.in-out-titulo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 88.0%;
+    margin-left: 0.9rem;
+}
+.drop-square {
+    background-color: var(--tom-terciario);
+    cursor: pointer;
+    width: 28px;
+    height: 28px;
+    margin-right: 0.6rem;
+    border-radius: 4px;
+}
+.drop-list-fechada {
+    display: none;
+}
+.drop-list-aberta {  /* Disponível ao clicar para abrir a lista de escalas */
+    z-index: 1;  /* Sobrepor sobre a lista de escalas */
+    background: white;
+    box-shadow: 5px 5px 12px 1px black;
+    position: relative;
+    top: 16px;
+    right: 245px;
+    display: block;
+    height: 180px;
+    width: 260px;
+    overflow-y: auto;
+    font-size: 1.4em;
+}
+.drop-list-aberta li {
+    color: black;
+    list-style: none;
+    padding: 0.4rem;
+    font-size: 0.7em;
+    transition: none;
+}
+.list-active {
+    background-color: var(--cinza-escuro);
+    cursor: auto;
+}
+.drop-list-aberta li:not(.list-active):hover {
+    background-color: var(--cinza-claro);
+}
+.input-output-escala {
+    font-weight: normal;
+    font-size: 1.0em;
+}
+#input, 
+#output {
+    z-index: 0;  /* Não sobrepor sobre a lista de escalas */
+    outline: solid black 3px;
+    width: 89.0%;
+    height: 14.0%;
+    margin-left: 1.0rem;
+    border-radius: 7px;
+    text-align: center;
+    font-size: 1.4em;
+}
+#output {
+    background: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#botoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 65.0%;
+    height: 20.0%;
+}
+#converter, 
+#inverter {
+    background-color: var(--tom-secundario);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    width: 40.0%;
+    height: 80.0%;
+    border-radius: 7px;
+    font-size: 1.0em;
+    transition-property: opacity, background-color; 
+    transition-duration: 0.15s, 1.4s;
+}
+#converter:active, 
+#inverter:active {
+    opacity: 0.6;
+}
+span.material-symbols-outlined {  /* Ícones do Google (valores padrão para os ícones de unidades de medida) */
+    -webkit-user-select: none;  /* Impedir que os textos dos ícones sejam copiados (ao clicar sobre eles, para evitar poluição visual) */
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 480;
+    font-size: 500.0%;
+    transition: 0.3s;
+}
+span#mudar-tema {
+    font-size: 260.0%;
+}
+span#mudar-tema:hover,
+.drop-square:hover span.drop-icon {
+    opacity: 0.7;
+    cursor: pointer;
+}
+.unidade:hover span.material-symbols-outlined, 
+.unidade-selecionada span.material-symbols-outlined { 
+    opacity: 0.7;
+    font-size: 300.0%;
+}
+span.drop-icon {
+    position: absolute;
+    font-size: 180.0%;
+}
+span#inverter-icone {
+    font-size: 220.0%;
+}
+footer {
+    background: var(--tom-quaternario);
+    outline: solid var(--tom-secundario) 2px;
+    width: 100.0%;
+    height: 140px;
+}
+#footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100.0%;
+    padding: 0 2.0vw;
+}
+
+@media only screen and (max-width: 854px) {  /* Telas menores */
+    main {
+        flex-direction: column-reverse;
+        width: 86.0vw;
+        height: unset;
+    }
+    #input-output-area {
+        gap: 0.6rem;
+        width: 98.0%;
+        height: unset;
+    }
+    .in-out-titulo {
+        margin-left: 0;
+    }
+    .drop-square {
+        width: 52px;
+        height: 52px;
+    }
+    .drop-list-aberta {  
+        top: 32px;
+        right: -26px;
+        width: 300px;
+        height: 220px;
+        font-size: 1.6em;
+    }
+    .input-output-escala {
+        font-size: 1.5em;
+    }
+    #input, 
+    #output {
+        width: 70.0%;
+        height: 55px;
+        margin-left: 0;
+        font-size: 2.0em;
+    }
+    #botoes {
+        height: 80px;
+    }
+    #converter {
+        font-size: 1.2em;
+    }
+    #unidades-area {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        row-gap: 1.0rem;
+        width: 90.0%;
+        height: unset;
+        margin-top: 1.8rem;
+    }
+    .unidade {
+        justify-self: center;
+        align-self: flex-start;
+        width: 96px;
+        height: 96px;
+    }
+    .unidade p {
+        font-size: 0.9em;
+    }
+    .unidade-selecionada {
+        outline-width: 6px;
+    }
+    span.material-symbols-outlined {
+        font-size: 240.0%;
+    }
+    span.drop-icon {
+        font-size: 330.0%;
+    }
+    .unidade:hover span.material-symbols-outlined, 
+    .unidade-selecionada span.material-symbols-outlined {
+        font-size: 400.0%;
+    }
+}
+
+@media only screen and (max-width: 734px) {
+    #input,
+    #output {
+        width: 80.0%;
+        font-size: 1.6em;
+    }
+    #unidades-area {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media only screen and (max-width: 592px) {
+    .input-output-escala {
+        font-size: 1.1em;
+    }
+    #input,
+    #output {
+        width: 85.0%;
+        font-size: 1.4em;
+    }
+    #converter {
+        font-size: 1.0em;
+    }
+    #unidades-area {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (max-width: 448px) {
+    .in-out-titulo {
+        flex-direction: column;
+        gap: 0.6rem;
+    }
+    .drop-list-aberta {  
+        right: 90px;
+        width: 240px;
+        height: 210px;
+        font-size: 1.3em;
+    }
+    .input-output-escala {
+        font-size: 1.2em;
+    }
+    #input,
+    #output {
+        width: 95.0%;
+        font-size: 1.1em;
+    }
+    #botoes {
+        width: 85.0%;
+        height: 80px;
+    }
+    #converter, 
+    #inverter {
+        width: 45.0%;
+        font-size: 1.0em;
+    }
+    #unidades-area {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (min-width: 1367px) {  /* Telas maiores */
+    #header-content, #footer-content {
+        width: 1367px;
+        margin: 0 auto;
+    }
+}
