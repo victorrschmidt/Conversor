@@ -10,8 +10,12 @@ Este repositório contém os arquivos de um projeto de site de conversão de med
 #### Notas:
 - Converte números hexadecimais para decimais e vice-versa.
 
-### v2.0 (Versão atual) - Link fixado do repositório
+### v2.0 (Versão atual) - https://victorrschmidt.github.io/conversor_de_medidas/v2.0/
 #### Notas:
 - Foram adicionados 9 unidades de medidas para conversão (temperatura, velocidade, dados, massa, comprimento, volume, tempo, frequência e moeda). A função de decimal-hexadecimal foi removida.
 - Design e estrutura alterados.
 - Responsividade melhorada.
+
+### v2.1 (Versão atual) - Link fixado do repositório
+#### Notas:
+- Algumas estruturas do site foram alteradas para melhorar o design.
