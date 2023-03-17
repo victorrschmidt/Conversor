@@ -6,9 +6,9 @@ Este repositório contém os arquivos de um projeto de site de conversão de med
 
 ## Versões
 
-### v1.0 (Primeira versão) - https://victorrschmidt.github.io/conversor_de_medidas/v1.0/
+### v2.0.1 (Versão atual) - Link fixado do repositório
 #### Notas:
-- Converte números hexadecimais para decimais e vice-versa.
+- Algumas estruturas do site foram alteradas para melhorar o design.
 
 ### v2.0 - https://victorrschmidt.github.io/conversor_de_medidas/v2.0/
 #### Notas:
@@ -16,6 +16,6 @@ Este repositório contém os arquivos de um projeto de site de conversão de med
 - Design e estrutura alterados.
 - Responsividade melhorada.
 
-### v2.1 (Versão atual) - Link fixado do repositório
+### v1.0 (Primeira versão) - https://victorrschmidt.github.io/conversor_de_medidas/v1.0/
 #### Notas:
-- Algumas estruturas do site foram alteradas para melhorar o design.
+- Converte números hexadecimais para decimais e vice-versa.
