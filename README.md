@@ -12,7 +12,7 @@ Este repositório contém os arquivos de um projeto de site de conversão de med
 
 <br>
 
-### v2.0.1 (Versão atual) - Link fixado do repositório
+### v2.0.1 - https://victorrschmidt.github.io/conversor_de_medidas/v2.0
 #### Notas:
 - Algumas estruturas do site foram alteradas para melhorar o design.
 
