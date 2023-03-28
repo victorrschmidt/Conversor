@@ -8,7 +8,8 @@ Este repositório contém os arquivos de um projeto de site de conversão de med
 
 ### v2.1 (Versão atual) - Link fixado do repositório
 #### Notas:
-- Algumas estruturas do site foram alteradas para melhorar o design.
+- Foi adicionado a função de mudar o idioma do site (Idiomas: português brasileiro e inglês).
+- Responsividade melhorada.
 
 <br>
 
