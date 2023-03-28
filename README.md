@@ -9,6 +9,7 @@ Este repositório contém os arquivos de um projeto de site de conversão de med
 ### v2.0.1 (Versão atual) - Link fixado do repositório
 #### Notas:
 - Algumas estruturas do site foram alteradas para melhorar o design.
+
 <br>
 
 ### v2.0 - https://victorrschmidt.github.io/conversor_de_medidas/v2.0
@@ -16,6 +17,7 @@ Este repositório contém os arquivos de um projeto de site de conversão de med
 - Foram adicionadas 9 unidades de medidas para conversão (temperatura, velocidade, dados, massa, comprimento, volume, tempo, frequência e moeda). A função de decimal-hexadecimal foi removida.
 - Design e estrutura alterados.
 - Responsividade melhorada.
+
 <br>
 
 ### v1.0 (Primeira versão) - https://victorrschmidt.github.io/conversor_de_medidas/v1.0
