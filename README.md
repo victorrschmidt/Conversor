@@ -8,7 +8,7 @@ Este repositório contém os arquivos de um projeto de site de conversão de med
 
 ### v2.1 (Versão atual) - Link fixado do repositório
 #### Notas:
-- Foi adicionada a função de mudar o idioma do site (Idiomas atuais: português brasileiro e inglês). Os SVGs associados foram utilizados a partir de https://github.com/lipis/flag-icons
+- Foi adicionada a função de mudar o idioma do site (Idiomas atuais: português brasileiro e inglês). Os SVGs associados foram utilizados a partir de https://github.com/lipis/flag-icons.
 - Responsividade melhorada.
 
 <br>
