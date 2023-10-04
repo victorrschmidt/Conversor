@@ -1,32 +1,5 @@
-<h1 align="center">Conversor de medidas</h1>
+# Conversor de medidas
 
 ## Sobre
 
 Este repositório contém os arquivos de um projeto de site de conversão de medidas, tais como: temperatura, massa, comprimento, etc. A proposta é ser uma ferramenta simples e intuitiva, e também uma forma de compreender melhor o funcionamento do HTML, CSS e Javascript.
-
-## Versões
-
-### v2.1 (Versão atual) - Link fixado do repositório
-#### Notas:
-- Foi adicionada a função de mudar o idioma do site (Idiomas atuais: português brasileiro e inglês). Os SVGs associados foram utilizados a partir de https://github.com/lipis/flag-icons.
-- Responsividade melhorada.
-
-<br>
-
-### v2.0.1 - https://victorrschmidt.github.io/conversor_de_medidas/v2.0.1
-#### Notas:
-- Algumas estruturas do site foram alteradas para melhorar o design.
-
-<br>
-
-### v2.0 - https://victorrschmidt.github.io/conversor_de_medidas/v2.0
-#### Notas:
-- Foram adicionadas 9 unidades de medidas para conversão (temperatura, velocidade, dados, massa, comprimento, volume, tempo, frequência e moeda). A função de decimal-hexadecimal foi removida.
-- Design e estrutura alterados.
-- Responsividade melhorada.
-
-<br>
-
-### v1.0 (Primeira versão) - https://victorrschmidt.github.io/conversor_de_medidas/v1.0
-#### Notas:
-- Converte números hexadecimais para decimais e vice-versa.
