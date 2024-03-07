@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conversor v2.1</title>
+    <title>Conversor</title>
     <link rel="icon" type="image/x-icon" href="img/favicon.ico?">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,32 +18,8 @@
         <div id="header-content">
             <div id="header-left-content">
                 <h1 id="logo">Conversor</h1>
-                <h2 id="versao">v2.1</h2>
             </div>
             <div id="header-right-content">
-                <div id="idiomas">
-                    <div id="idiomas-menu">
-                        <div class="idioma-bandeira">
-                            <span class="fi fi-br bandeira"></span>
-                        </div>
-                        <div class="idioma-extenso">
-                            <p>Português-BR</p>
-                        </div>
-                        <div id="idiomas-menu-icon">
-                            <span class="material-symbols-outlined" id="idioma-dropdown-icon">arrow_drop_down</span>
-                        </div>
-                    </div>
-                    <ul id="idiomas-list">
-                        <li id="ingles" onclick="mudarIdioma(this.id)">
-                            <div class="idioma-bandeira">
-                                <span class="fi fi-gb bandeira"></span>
-                            </div>
-                            <div class="idioma-extenso">
-                                <p>English</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
                 <span class="material-symbols-outlined" id="mudar-tema">tonality</span>
             </div>
         </div>
@@ -55,37 +31,37 @@
                     <span class="material-symbols-outlined">device_thermostat</span>
                     <p class="unidade-desc">Temperatura</p>
                 </div>
-                <div class="unidade" id="velocidade" onclick="mudarUnidade(this.id)">
+                <div class="unidade" id="velocidade">
                     <span class="material-symbols-outlined">speed</span>
                     <p class="unidade-desc">Velocidade</p>
                 </div>
-                <div class="unidade" id="dados" onclick="mudarUnidade(this.id)">
+                <div class="unidade" id="dados">
                     <span class="material-symbols-outlined">database</span>
                     <p class="unidade-desc">Dados</p>
                 </div>
-                <div class="unidade" id="massa" onclick="mudarUnidade(this.id)">
+                <div class="unidade" id="massa">
                     <span class="material-symbols-outlined">weight</span>
                     <p class="unidade-desc">Massa</p>
                 </div>
-                <div class="unidade" id="comprimento" onclick="mudarUnidade(this.id)">
+                <div class="unidade" id="comprimento">
                     <span class="material-symbols-outlined">open_in_full</span>
                     <p class="unidade-desc">Comprimento</p>
                 </div>
-                <div class="unidade" id="volume" onclick="mudarUnidade(this.id)">
+                <div class="unidade" id="volume">
                     <span class="material-symbols-outlined">view_in_ar</span>
                     <p class="unidade-desc">Volume</p>
                 </div>
-                <div class="unidade" id="tempo" onclick="mudarUnidade(this.id)">
+                <div class="unidade" id="tempo">
                     <span class="material-symbols-outlined">nest_clock_farsight_analog</span>
                     <p class="unidade-desc">Tempo</p>
                 </div>
-                <div class="unidade" id="frequencia" onclick="mudarUnidade(this.id)">
+                <div class="unidade" id="frequencia">
                     <span class="material-symbols-outlined">radio</span>
                     <p class="unidade-desc">Frequência</p>
                 </div>     
-                <div class="unidade" id="moeda" onclick="mudarUnidade(this.id)">
+                <div class="unidade" id="moeda">
                     <span class="material-symbols-outlined">attach_money</span>
-                    <p class="unidade-desc">Moeda</p> <!-- Câmbio atualizado em 04/09/2022 / 20:05 UTC-3 -->
+                    <p class="unidade-desc">Moeda</p>  <!-- Câmbio atualizado em 04/09/2022 / 20:05 UTC-3 -->
                 </div>
             </div>
             <div id="input-output-area">
@@ -96,19 +72,19 @@
                         </div>
                         <ul class="drop-list" id="input-list">
                             <li id="in-celsius" class="list-active">Celsius (°C)</li>
-                            <li id="in-fahrenheit" onclick="mudarEscala(this.id)">Fahrenheit (°F)</li>
-                            <li id="in-kelvin" onclick="mudarEscala(this.id)">Kelvin (K)</li>
-                            <li id="in-rankine" onclick="mudarEscala(this.id)">Rankine (°Ra)</li>
-                            <li id="in-reaumur" onclick="mudarEscala(this.id)">Réaumur (°Ré)</li>
-                            <li id="in-newton" onclick="mudarEscala(this.id)">Newton (°N)</li>
+                            <li id="in-fahrenheit">Fahrenheit (°F)</li>
+                            <li id="in-kelvin">Kelvin (K)</li>
+                            <li id="in-rankine">Rankine (°Ra)</li>
+                            <li id="in-reaumur">Réaumur (°Ré)</li>
+                            <li id="in-newton">Newton (°N)</li>
                         </ul>
                     </div>        
                     <h3 class="input-output-escala" id="input-desc">Celsius (°C)</h3>
                 </div>
                 <input id="input" type="number" placeholder="Digite o valor" autofocus>
                 <div id="botoes">
-                    <button id="converter" onclick="converter()">Converter</button>
-                    <button id="inverter" onclick="inverter()">
+                    <button id="converter">Converter</button>
+                    <button id="inverter">
                         <span class="material-symbols-outlined" id="inverter-icone">swap_vert</span>
                     </button>
                 </div>
@@ -118,12 +94,12 @@
                             <span class="material-symbols-outlined drop-icon" id="output-icon">arrow_drop_down</span>
                         </div>
                         <ul class="drop-list" id="output-list">
-                            <li id="out-celsius" onclick="mudarEscala(this.id)">Celsius (°C)</li>
+                            <li id="out-celsius">Celsius (°C)</li>
                             <li id="out-fahrenheit" class="list-active">Fahrenheit (°F)</li>
-                            <li id="out-kelvin" onclick="mudarEscala(this.id)">Kelvin (K)</li>
-                            <li id="out-rankine" onclick="mudarEscala(this.id)">Rankine (°Ra)</li>
-                            <li id="out-reaumur" onclick="mudarEscala(this.id)">Réaumur (°Ré)</li>
-                            <li id="out-newton" onclick="mudarEscala(this.id)">Newton (°N)</li>
+                            <li id="out-kelvin">Kelvin (K)</li>
+                            <li id="out-rankine">Rankine (°Ra)</li>
+                            <li id="out-reaumur">Réaumur (°Ré)</li>
+                            <li id="out-newton">Newton (°N)</li>
                         </ul>
                     </div>
                     <h3 class="input-output-escala" id="output-desc">Fahrenheit (°F)</h3>                     

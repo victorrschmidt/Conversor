@@ -48,7 +48,9 @@ header {
     width: 100.0%;
     max-width: 1366px;
 }
+
 /* -------------------- Esquerda -------------------- */
+
 #header-left-content {
     display: flex;
     justify-content: left;
@@ -60,81 +62,14 @@ header {
     font-weight: normal;
     font-size: 2.4em;
 }
-#versao {
-    opacity: 0.8;
-    font-weight: normal;
-    font-size: 1.4em;
-}
+
 /* -------------------- Direita -------------------- */
+
 #header-right-content {
     display: flex;
     justify-content: right;
     align-items: center;
     gap: 0.5rem;
-}
-#idiomas {
-    position: relative;
-    cursor: pointer;
-    width: 170px;
-    transition-property: width;
-    transition-duration: 1.0s;
-}
-#idiomas > * {
-    transition-duration: 0.2s;
-}
-#idiomas-menu {
-    background-color: white;
-    color: black;
-    display: flex;
-    align-items: center;
-    height: 38px;
-    border-radius: 8px 8px 0 0;
-    transition-duration: 0.2s;
-}
-#idiomas-menu:hover {
-    background-color: var(--cinza-claro);
-}
-#idiomas-menu-icon, 
-.idioma-bandeira, 
-.idioma-extenso {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-#idiomas-menu-icon {
-    width: 34px;
-}
-.idioma-bandeira {
-    width: 34px;
-}
-.idioma-extenso {
-    width: 102px;
-    overflow: hidden;
-    transition-property: width;
-    transition-duration: 1.0s;
-}
-.idioma-extenso > p {
-    width: 100.0%;
-    white-space: nowrap;
-}
-#idiomas-list {
-    position: absolute;
-    display: none;
-    width: 100.0%;
-}
-#idiomas-list > li {
-    background-color: white;
-    color: black;
-    display: flex;
-    align-items: center;
-    height: 38px;
-    transition-duration: 0.2s;
-}
-#idiomas-list > li:hover {
-    background-color: var(--cinza-claro);
-}
-#idiomas-list > li:last-child {
-    border-radius: 0 0 8px 8px;
 }
 
 /* ---------------------------------------- Main ---------------------------------------- */
@@ -159,7 +94,9 @@ main {
     padding: 0.9rem;
     border-radius: 12px;
 }
+
 /* -------------------- Unidades -------------------- */
+
 #unidades-area {
     display: flex;
     flex-wrap: wrap;
@@ -189,7 +126,9 @@ main {
 .unidade-desc {
     font-size: 1.0em;
 }
+
 /* -------------------- Input e output -------------------- */
+
 #input-output-area {
     display: flex;
     flex-direction: column;
@@ -289,8 +228,6 @@ main {
     border-radius: 7px;
     font-size: 1.0em;
     cursor: pointer;
-    transition-property: opacity;
-    transition-duration: 0.8s;
 }
 #converter:hover, 
 #inverter:hover {
@@ -309,12 +246,6 @@ span.material-symbols-outlined {
     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 480;
     font-size: 500.0%;
     transition: 0.3s;
-}
-span.bandeira {
-    font-size: 110.0%;
-}
-span#idioma-dropdown-icon {
-    font-size: 180.0%;
 }
 span#mudar-tema {
     font-size: 260.0%;
@@ -436,15 +367,6 @@ span#inverter-icone {
     }
     #unidades-area {
         grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media only screen and (max-width: 498px) {
-    #idiomas {
-        width: 68px;
-    }
-    .idioma-extenso {
-        width: 0;
     }
 }
 
