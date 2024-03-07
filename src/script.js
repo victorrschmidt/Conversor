@@ -1,6 +1,6 @@
 const root = document.documentElement,  // Elementos do HTML
-input_dropdown = document.getElementById("input-dropdown"),
-output_dropdown = document.getElementById("output-dropdown"),
+const input_dropdown = document.getElementById("input-dropdown"),
+const output_dropdown = document.getElementById("output-dropdown"),
 input_icon = document.getElementById("input-icon"),
 output_icon = document.getElementById("output-icon"),
 input_desc = document.getElementById("input-desc"),
